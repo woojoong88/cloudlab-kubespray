@@ -1,6 +1,8 @@
 # Kubespray for CloudLab (cloudlab-kubespray)
 Kubespray to deploy Kubernetes into CloudLab
 
+[![Language]](https://img.shields.io/github/languages/top/woojoong88/cloudlab-kubespray.svg)
+
 ## Preliminaries
 ### 1. Need to install Kubernentes and Helm on your local machine
 
