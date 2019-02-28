@@ -1,4 +1,4 @@
-# cloudlab-kubespray
+# Kubespray for CloudLab (cloudlab-kubespray)
 Kubespray to deploy Kubernetes into CloudLab
 
 ## Preliminaries
