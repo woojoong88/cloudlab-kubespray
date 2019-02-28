@@ -1,7 +1,16 @@
 # Kubespray for CloudLab (cloudlab-kubespray)
-Kubespray to deploy Kubernetes into CloudLab
-
+![GitHub](https://img.shields.io/github/license/woojoong88/cloudlab-kubespray.svg)
 ![GitHub top language](https://img.shields.io/github/languages/top/woojoong88/cloudlab-kubespray.svg)
+![GitHub language count](https://img.shields.io/github/languages/count/woojoong88/cloudlab-kubespray.svg)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/woojoong88/cloudlab-kubespray.svg)
+![GitHub repo size in bytes](https://img.shields.io/github/repo-size/woojoong88/cloudlab-kubespray.svg)
+![GitHub All Releases](https://img.shields.io/github/downloads/woojoong88/cloudlab-kubespray/total.svg)
+![GitHub issues](https://img.shields.io/github/issues-raw/woojoong88/cloudlab-kubespray.svg)
+![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/woojoong88/cloudlab-kubespray.svg)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/woojoong88/cloudlab-kubespray.svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/woojoong88/cloudlab-kubespray.svg)
+
+Kubespray to deploy Kubernetes into CloudLab
 
 ## Preliminaries
 ### 1. Need to install Kubernentes and Helm on your local machine
