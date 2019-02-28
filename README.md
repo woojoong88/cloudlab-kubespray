@@ -5,6 +5,7 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/woojoong88/cloudlab-kubespray.svg)
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/woojoong88/cloudlab-kubespray.svg)
 ![GitHub All Releases](https://img.shields.io/github/downloads/woojoong88/cloudlab-kubespray/total.svg)
+
 ![GitHub issues](https://img.shields.io/github/issues-raw/woojoong88/cloudlab-kubespray.svg)
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/woojoong88/cloudlab-kubespray.svg)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/woojoong88/cloudlab-kubespray.svg)
