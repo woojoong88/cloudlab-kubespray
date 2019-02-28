@@ -67,7 +67,7 @@ install_kubespray () {
 
   # Install Kubespray
   echo "Installing Kubespray"
-  ansible-playbook -i "inventories/${DEPLOYMENT_NAME}/inventory.cfg" -e docker_version='17.03' kubespray/cluster.yml -b -v
+  ansible-playbook -i "inventories/${DEPLOYMENT_NAME}/inventory.cfg" -e docker_version='${DOCKER_VERSION}' kubespray/cluster.yml -b -v
 }
 
 #
@@ -135,11 +135,12 @@ fi
 
 CLI_OPT=$1
 DEPLOYMENT_NAME=$2
-shift 3
+shift 4
 DEFAULT_NODES=(10.90.0.101 10.90.0.102 10.90.0.103)
 NODES=("${@:-${DEFAULT_NODES[@]}}")
 
 REMOTE_SSH_USER="${3:-cord}"
+DOCKER_VERSION="${4:-18.09}"
 
 while :
 do
