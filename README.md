@@ -42,20 +42,26 @@ node3$ echo <paste plain text> >> ./ssh/authroized_keys
 ...
 ```
 
-### 3. Install Docker Container
+### 3. Install Docker Container Engine
 Follow the link: https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
-### 4. Install virtualenv
+### 4. Get Docker Container Engine Version
+Record Docker CE version, which will be used to run `setup.sh` at i*6*.
+```
+node1$ docker --version
+```
+
+### 5. Install virtualenv
 ```
 node1$ sudo apt install virtualenv python-pip -y
 ```
 
-### 5. Run setup.sh file
+### 6. Run setup.sh file
 ```
 node1$ ./setup.sh -i <name> <ssh login ID> <Docker version> <node1 IP address> <node2 IP address> <node3 IP address>
 ```
 
-### 6. How to use Kubernetes with your local machine?
+### 7. How to use Kubernetes with your local machine?
 #### * Copy `admin.conf` file
 ```
 node1$ sudo cat /etc/kubernetes/admin.conf
