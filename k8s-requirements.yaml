@@ -80,3 +80,6 @@
       tags:
         - skip_ansible_lint # there isn't a module for this, command is idempotent
 
+    - name: Expand disk storage
+      command: "./cloudlab-disk-setup.sh"
+
