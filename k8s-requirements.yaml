@@ -80,6 +80,12 @@
       tags:
         - skip_ansible_lint # there isn't a module for this, command is idempotent
 
+    - name: Copy cloudlab-disk-setup shell script
+      template:
+        src: ./cloudlab-disk-setup.sh.j2
+        dest: ~/cloudlab-disk-setup.sh
+        mode: 0777
+
     - name: Expand disk storage
       command: "./cloudlab-disk-setup.sh"
 
