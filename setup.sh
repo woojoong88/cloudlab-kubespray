@@ -55,6 +55,7 @@ install_kubespray () {
   rm -rf "inventories/${DEPLOYMENT_NAME}"
   mkdir -p "inventories/${DEPLOYMENT_NAME}"
 
+  pip3 install -r kubespray/contrib/requirements.txt
   cp -r kubespray/inventory/sample/group_vars "inventories/${DEPLOYMENT_NAME}/group_vars"
   CONFIG_FILE="inventories/${DEPLOYMENT_NAME}/inventory.cfg" python3 kubespray/contrib/inventory_builder/inventory.py "${NODES[@]}"
 
@@ -135,12 +136,12 @@ fi
 
 CLI_OPT=$1
 DEPLOYMENT_NAME=$2
+REMOTE_SSH_USER="${3:-cord}"
+DOCKER_VERSION="${4:-18.09}"
+
 shift 4
 DEFAULT_NODES=(10.90.0.101 10.90.0.102 10.90.0.103)
 NODES=("${@:-${DEFAULT_NODES[@]}}")
-
-REMOTE_SSH_USER="${3:-cord}"
-DOCKER_VERSION="${4:-18.09}"
 
 while :
 do
