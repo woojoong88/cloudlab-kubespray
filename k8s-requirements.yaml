@@ -83,7 +83,7 @@
     - name: Copy cloudlab-disk-setup shell script
       template:
         src: ./cloudlab-disk-setup.sh.j2
-        dest: ~/cloudlab-disk-setup.sh
+        dest: /tmp/cloudlab-disk-setup.sh
         mode: 0777
 
     - name: Expand disk storage
