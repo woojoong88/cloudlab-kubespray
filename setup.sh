@@ -20,7 +20,9 @@
 
 set -e -o pipefail
 
-KS_COMMIT="${KS_COMMIT:-master}"
+# From WKIM: Patch -- New KubeSpray does not work due to the "inventory_builder" [Mar. 5, 2019]
+KS_COMMIT="${KS_COMMIT:-bbfd2dc2bd088efc63747d903edd41fe692531d8}"
+#KS_COMMIT="${KS_COMMIT:-master}"
 
 install_kubespray () {
   # Cleanup Old Kubespray Installations
@@ -37,12 +39,17 @@ install_kubespray () {
   # create a virtualenv with specific packages, if it doesn't exist
   if [ ! -x "ks_venv/bin/activate" ]
   then
-    virtualenv ks_venv
+    # From WKIM: Upgrade python 2.7 to 3.0
+    virtualenv ks_venv -p python3
+    #virtualenv ks_venv
     # shellcheck disable=SC1091
     source ks_venv/bin/activate
 
-    pip install ansible==2.5.3
-    pip install -r kubespray/requirements.txt
+    # From WKIM: Upgrade ansible 2.7.8
+    pip3 install ansible==2.7.8
+    #pip install ansible==2.5.3
+    pip3 install -r kubespray/requirements.txt
+    pip3 install -r kubespray/contrib/inventory_builder/requirements.txt
   else
     # shellcheck disable=SC1091
     source ks_venv/bin/activate
