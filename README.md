@@ -61,7 +61,7 @@ node1$ sudo apt install virtualenv -y
 node1$ ./setup.sh -i <name> <ssh login ID> <Docker version> <node1 IP address> <node2 IP address> <node3 IP address>
 ```
 
-*NOTE: Tested with Ubuntu 18.04 and Docker version 18.06, which is stable*
+**NOTE: Tested with Ubuntu 18.04 and Docker version 18.06, which is stable**
 
 ### 5. How to use Kubernetes with your local machine?
 #### * Copy `admin.conf` file
@@ -83,6 +83,7 @@ local$ export KUBECONFIG=/path/to/admin.conf
 
 #### * Validation
 ```
+local$ kubectl get nodes
 local$ kubectl get nodes
 local$ helm ls
 ```
