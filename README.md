@@ -100,3 +100,12 @@ local$ helm ls
 node1$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
 ```
 
+### * If get stuck at "Restart all kube-proxy pods to ensure that they load the new configmap"
+```
+node1 or node2$ export KUBECONFIG=/etc/kubernetes/admin.conf
+node1 or node2$ sudo kubectl get pods --all-namespaces
+# Get three kube-proxy pods
+node1 or node2$ sudo kubectl delete pod <kube-proxy pod1> -n kube-system --force --grace-period=0
+node1 or node2$ sudo kubectl delete pod <kube-proxy pod2> -n kube-system --force --grace-period=0
+node1 or node2$ sudo kubectl delete pod <kube-proxy pod3> -n kube-system --force --grace-period=0
+```
