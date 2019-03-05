@@ -35,11 +35,20 @@ node3$ ssh-keygen -t rsa
 ```
 node1$ cat ~/.ssh/id_rsa.pub
 # Copy plain text in the id_rsa.pub file
-# Access to node2
-node2$ echo <paste plain text> >> ./ssh/authroized_keys
-# Access to node3
-node3$ echo <paste plain text> >> ./ssh/authroized_keys
-...
+# Access to node1 from node1
+node1$ echo <paste plain text> >> ~/.ssh/authroized_keys
+# Access to node2 from node1
+node2$ echo <paste plain text> >> ~/.ssh/authroized_keys
+# Access to node3 from node1
+node3$ echo <paste plain text> >> ~/.ssh/authroized_keys
+
+# Copy the key to each node
+node1$ ssh <SSH ID>@node1
+node1$ ssh-copy-id <SSH ID>@node1
+node1$ ssh <SSH ID>@node2
+node1$ ssh-copy-id <SSH ID>@node2
+node1$ ssh <SSH ID>@node3
+node1$ ssh-copy-id <SSH ID>@node3
 ```
 
 ### 3. Install Docker Container Engine
@@ -53,7 +62,7 @@ node1$ docker --version
 
 ### 5. Install virtualenv
 ```
-node1$ sudo apt install virtualenv python-pip -y
+node1$ sudo apt install virtualenv -y
 ```
 
 ### 6. Run setup.sh file
