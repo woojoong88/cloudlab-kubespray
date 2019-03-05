@@ -75,7 +75,7 @@ install_kubespray () {
 
   # Install Kubespray
   echo "Installing Kubespray"
-  ansible-playbook -i "inventories/${DEPLOYMENT_NAME}/inventory.cfg" -e docker_version='${DOCKER_VERSION}' kubespray/cluster.yml -b -v
+  ansible-playbook -i "inventories/${DEPLOYMENT_NAME}/inventory.cfg" -e docker_version=${DOCKER_VERSION} kubespray/cluster.yml -b -v
 }
 
 #
