@@ -88,9 +88,14 @@ local$ kubectl get nodes
 local$ helm ls
 ```
 
-### Appendix 1. Troubleshooting
+## Release information
+* Release 1: [Mar. 5, 2019] Initial version -- Possible to set up K8S in CloudLab
 
-#### * If one or more nodes are not ready yet
+* Master version: Might unstable
+
+## Appendix 1. Troubleshooting
+
+### * If one or more nodes are not ready yet
 ```
 node1$ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
 ```
