@@ -1,4 +1,7 @@
 # Kubespray for CloudLab (cloudlab-kubespray)
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/20065f2a383243648c9c5e44326ab32a)](https://app.codacy.com/app/woojoong88/cloudlab-kubespray?utm_source=github.com&utm_medium=referral&utm_content=woojoong88/cloudlab-kubespray&utm_campaign=Badge_Grade_Dashboard)
+
 ![GitHub](https://img.shields.io/github/license/woojoong88/cloudlab-kubespray.svg)
 ![GitHub top language](https://img.shields.io/github/languages/top/woojoong88/cloudlab-kubespray.svg)
 ![GitHub language count](https://img.shields.io/github/languages/count/woojoong88/cloudlab-kubespray.svg)
